@@ -29,67 +29,90 @@ This project implements a rule engine system where rules can be dynamically crea
 ```bash
 git clone https://github.com/your-repo/rule-engine.git
 cd rule-engine
-2. Backend Setup
+```
+
+### 2. Backend Setup
+
 Navigate to the backend directory:
 
-bash
-Copy code
+```bash
 cd backend
+```
+
 Install dependencies:
 
-bash
-Copy code
+```bash
 npm install
+```
+
 Start the backend server:
 
-bash
-Copy code
+```bash
 npm start
+```
+
 By default, the backend will run on http://localhost:5000.
 
-3. Frontend Setup
+### 3. Frontend Setup
+
 Open a new terminal and navigate to the frontend directory:
 
-bash
-Copy code
+```bash
 cd frontend
+```
+
 Install frontend dependencies:
 
-bash
-Copy code
+```bash
 npm install
+```
+
 Start the frontend server:
 
-bash
-Copy code
+```bash
 npm start
+```
+
 By default, the frontend will run on http://localhost:3000.
 
-4. Testing APIs (Optional)
+### 4. Testing APIs (Optional)
+
 If you want to test the backend API separately:
 
-Create Rule:
+#### Create Rule:
 
-bash
-Copy code
+```bash
 POST http://localhost:5000/api/rules
 Body: { "ruleString": "age > 30 AND department = 'Sales'" }
-Combine Rules:
+```
 
-bash
-Copy code
+#### Combine Rules:
+
+```bash
 POST http://localhost:5000/api/combine-rules
 Body: { "ruleStrings": ["age > 30 AND department = 'Sales'", "salary > 50000"] }
-Evaluate Rules:
+```
 
-bash
-Copy code
+#### Evaluate Rules:
+
+```bash
 POST http://localhost:5000/api/evaluate-rule
 Body: { "ast": {YOUR_AST_HERE}, "data": { "age": 35, "department": "Sales", "salary": 60000 } }
-5. Environment Variables
+```
+
+### 5. Environment Variables
+
 You can configure the environment variables for both frontend and backend by creating a .env file in the respective directories:
 
-Backend:
+#### Backend:
+
+```
 PORT: The port on which the backend runs (default is 5000).
-Frontend:
+```
+
+#### Frontend:
+
+```
 REACT_APP_API_URL: The backend API URL (default is http://localhost:5000).
+```
+
